@@ -85,7 +85,7 @@
     <h1>Tuyển Tập Truyện Dân Gian</h1>
 
     <div class="grid" id="content-grid">
-        </div>
+    </div>
 
     <div id="viewer">
         <div class="viewer-box">
@@ -95,26 +95,28 @@
     </div>
 
     <script>
-        // --- DANH SÁCH 3 TRUYỆN CỦA BẠN ---
-        // Bạn hãy thay LINK_YOUTUBE_CUA_BAN bằng link thật nhé
+        // --- DANH SÁCH ĐÃ ĐƯỢC SỬA LINK ---
         const data = [
             {
                 name: "Sự Tích Chiếc Yếm Bò",
                 type: "Phim Hoạt Hình",
-                link: "https://youtube.com/shorts/DYQi8GYS5E4", 
-                icon: "fa-film" // Biểu tượng phim
+                // Đã đổi thành link embed
+                link: "https://www.youtube.com/embed/DYQi8GYS5E4", 
+                icon: "fa-film"
             },
             {
                 name: "Sự Tích Hạt Lúa",
                 type: "Phim Hoạt Hình",
-                link: "https://youtu.be/SrRZDv5966o",
-                icon: "fa-seedling" // Biểu tượng hạt giống
+                // Đã đổi thành link embed
+                link: "https://www.youtube.com/embed/SrRZDv5966o",
+                icon: "fa-seedling"
             },
             {
                 name: "Người Vợ Câm",
                 type: "Truyện / Phim",
-                link: "https://youtube.com/shorts/uYz8OPu_T9A",
-                icon: "fa-book-open" // Biểu tượng sách
+                // Đã đổi thành link embed
+                link: "https://www.youtube.com/embed/uYz8OPu_T9A",
+                icon: "fa-book-open"
             }
         ];
 
@@ -123,7 +125,6 @@
         data.forEach(item => {
             const card = document.createElement('div');
             card.className = 'card';
-            // Tạo thẻ hiển thị (dùng icon thay vì ảnh để không bị lỗi xám xịt)
             card.innerHTML = `
                 <div class="thumb">
                     <i class="fas ${item.icon}"></i>
@@ -144,7 +145,7 @@
 
         function closeView() {
             document.getElementById('viewer').style.display = 'none';
-            document.getElementById('screen').innerHTML = '';
+            document.getElementById('screen').innerHTML = ''; // Tắt video khi đóng
         }
     </script>
 
